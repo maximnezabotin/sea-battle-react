@@ -5,6 +5,6 @@ export default class Footer extends React.PureComponent {
   text = 'Maxim Nezabotin 2018 (c)';
 
   render() {
-    return (<div className="footer">{this.text}</div>);
+    return (<h5 className="footer">{this.text}</h5>);
   }
 }
