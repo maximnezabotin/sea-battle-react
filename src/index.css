@@ -2,14 +2,9 @@ html {
   font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-size: 1em;
   color: #555;
+  background-color: #fdfdfd;
 }
 
 body {
   margin: 0;
-  background-color: #fdfdfd;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
 }

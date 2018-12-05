@@ -1,0 +1,20 @@
+.btn {
+  outline: 0;
+  padding: 0.5em 1em;
+  font-size: 1.8em;
+  background-color: transparent;
+  border: 2px solid #555;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 3em 0;
+  color: #555;
+  transition: .1s;
+}
+
+.btn:hover {
+  background-color: #dfdfdf;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
