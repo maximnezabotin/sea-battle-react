@@ -1,0 +1,14 @@
+{
+  "name": "sea-battle-react",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "react-scripts": "^1.0.17"
+  }
+}
