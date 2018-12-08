@@ -3,6 +3,6 @@ import './start.css'
 
 export default class Start extends React.PureComponent {
   render() {
-    return (<button className="btn">Start</button>);
+    return (<button className="btn" onClick={this.props.onClick}>Start</button>);
   }
 }

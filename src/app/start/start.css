@@ -2,19 +2,29 @@
   outline: 0;
   padding: 0.5em 1em;
   font-size: 1.8em;
-  background-color: transparent;
-  border: 2px solid #555;
+  background-color: #17adc1;
+  border: 0.15em solid #fff;
   text-transform: uppercase;
   cursor: pointer;
   margin: 3em 0;
-  color: #555;
+  color: #fff;
+  box-shadow: 0 1px 2px #607D8B;
+  border-radius: 4px;
   transition: .1s;
+  animation: heartbeat 1s infinite;
 }
 
 .btn:hover {
-  background-color: #dfdfdf;
+  background-color: #e91e63;
 }
 
 .btn:active {
   transform: scale(0.95);
+  animation: none;
+}
+
+@keyframes heartbeat {
+  from {transform: scale(1);}
+  50% {transform: scale(1.05);}
+  to {transform: scale(1);}
 }

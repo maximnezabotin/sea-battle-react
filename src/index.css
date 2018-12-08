@@ -2,7 +2,8 @@ html {
   font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-size: 1em;
   color: #555;
-  background-color: #fdfdfd;
+  user-select: none;
+  background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85));
 }
 
 body {

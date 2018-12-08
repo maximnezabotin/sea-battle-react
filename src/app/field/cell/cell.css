@@ -1,3 +1,37 @@
 .cell {
-  
+	position: relative;
+  width: 10%;
+  box-sizing: border-box;
+  border: 1px solid #795548;
+}
+
+.cell:before {
+  content: '';
+  display: block;
+  margin-top: 100%;
+}
+
+.square {
+  cursor: crosshair;
+  background-color: #dafaff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: .05s;
+}
+
+.square:active,
+.square:hover {
+  box-shadow: 1px 1px 0px rgba(10, 10, 10, 0.5), -1px -1px 0px rgba(10, 10, 10, 0.5);
+}
+
+.square:hover {
+  transform: scale(1.1);
+}
+
+.square:active {
+  transform: scale(.9);
 }

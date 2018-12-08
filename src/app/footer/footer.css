@@ -1,4 +1,6 @@
 .footer {
-  font-size: 1.4em;
+  font-size: 1.25em;
   text-align: center;
+  text-transform: lowercase;
+  color: #cecece;
 }

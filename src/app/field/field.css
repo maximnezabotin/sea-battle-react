@@ -1,3 +1,11 @@
 .field {
-  
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 480px;
+  height: 480px;
+  background-color: #795548;
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0px 2px 4px rgba(12, 12, 12, 0.3), 0px -2px 3px rgba(12, 12, 12, 0.25);
 }
