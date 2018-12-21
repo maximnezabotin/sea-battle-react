@@ -2,7 +2,8 @@
   font-size: 6em;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 1px 2px 0px #fff;
-  color: #aef6ff;
+  text-shadow: 1px 2px 0px #ffd8ae;
   transform: rotate(-2deg);
+  color: #8fbc8f;
+  font-weight: 900;
 }

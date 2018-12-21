@@ -1,5 +1,4 @@
 .cell {
-	position: relative;
   width: 10%;
   box-sizing: border-box;
   border: 1px solid #795548;
@@ -9,23 +8,48 @@
   content: '';
   display: block;
   margin-top: 100%;
+  float: left;
 }
 
 .square {
   cursor: crosshair;
   background-color: #dafaff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  transition: .05s;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.square:active,
+.active.square:before {
+  content: '';
+  display: block;
+  border-radius: 50%;
+  width: 40%;
+  height: 40%;
+  background-color: #2d7fa5;
+  animation: wave-animate .2s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes wave-animate {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: center;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 1;
+    transform-origin: center;
+  }
+}
+
+/*.square:active,
 .square:hover {
   box-shadow: 1px 1px 0px rgba(10, 10, 10, 0.5), -1px -1px 0px rgba(10, 10, 10, 0.5);
+  z-index: 100;
+  background-color: #cff9ff;
 }
 
 .square:hover {
@@ -34,4 +58,4 @@
 
 .square:active {
   transform: scale(.9);
-}
+}*/

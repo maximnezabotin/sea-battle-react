@@ -2,12 +2,12 @@
   outline: 0;
   padding: 0.5em 1em;
   font-size: 1.8em;
-  background-color: #17adc1;
-  border: 0.15em solid #fff;
+  background-color: #1d7b88;
+  border: 0.15em solid #ffd8ae;
   text-transform: uppercase;
   cursor: pointer;
   margin: 3em 0;
-  color: #fff;
+  color: #ffd8ae;
   box-shadow: 0 1px 2px #607D8B;
   border-radius: 4px;
   transition: .1s;
