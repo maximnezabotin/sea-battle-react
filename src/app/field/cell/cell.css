@@ -19,6 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: .07s;
 }
 
 .active.square:before {
@@ -45,17 +46,11 @@
   }
 }
 
-/*.square:active,
-.square:hover {
-  box-shadow: 1px 1px 0px rgba(10, 10, 10, 0.5), -1px -1px 0px rgba(10, 10, 10, 0.5);
-  z-index: 100;
-  background-color: #cff9ff;
-}
-
-.square:hover {
-  transform: scale(1.1);
-}
-
 .square:active {
-  transform: scale(.9);
-}*/
+  transform: scale(.85);
+}
+
+.active.square:active {
+  box-shadow: none;
+  transform: scale(1);
+}
