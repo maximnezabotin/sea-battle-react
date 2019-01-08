@@ -3,6 +3,6 @@ import './header.css'
 
 export default class Header extends React.PureComponent {
   render() {
-    return (<h1 className="header">Sea Battle</h1>);
+    return (<h1 className="header">Battleship</h1>);
   }
 }

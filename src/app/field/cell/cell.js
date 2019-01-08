@@ -1,4 +1,5 @@
 import React from 'react';
+import { store } from '../../store/store';
 import './cell.css'
 
 export default class Cell extends React.PureComponent {
@@ -10,10 +11,13 @@ export default class Cell extends React.PureComponent {
 
   click() {
     this.setState({isActive: true});
-    console.log(this.props.pos);
+    store.dispatch({type: 'FIRE', x: this.props.pos.x, y: this.props.pos.y});
   }
 
   render() {
-    return (<div className="cell"><div className={this.state.isActive ? 'square active' : 'square'} onClick={this.click}></div></div>);
+    return (<div 
+      className="cell">
+      <div className={this.state.isActive ? 'square active' : 'square'} 
+      onClick={this.click}></div></div>);
   }
 }

@@ -1,6 +1,6 @@
 {
-  "short_name": "sea battle",
-  "name": "Sea Battle React",
+  "short_name": "Battleship",
+  "name": "Battleship React",
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",

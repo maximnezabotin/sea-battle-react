@@ -19,7 +19,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: .07s;
 }
 
 .active.square:before {
@@ -28,9 +27,10 @@
   border-radius: 50%;
   width: 40%;
   height: 40%;
-  background-color: #2d7fa5;
-  animation: wave-animate .2s ease-out;
+  background-color: #aef0ff;
+  animation: wave-animate .3s ease-out;
   animation-fill-mode: forwards;
+  border: 2px solid #48ade8;
 }
 
 @keyframes wave-animate {
@@ -46,11 +46,11 @@
   }
 }
 
-.square:active {
+/*.square:active {
   transform: scale(.85);
 }
 
 .active.square:active {
   box-shadow: none;
   transform: scale(1);
-}
+}*/

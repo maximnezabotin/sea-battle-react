@@ -1,0 +1,40 @@
+.part {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  animation: shot-animate .15s ease-out;
+}
+
+.part:before,
+.part:after {
+  content: '';
+  display: block;
+  background: #f44336;
+  border-radius: 4px;
+  transform: rotate(45deg);
+}
+
+.part:before {
+  width: 100%;
+  height: 10%;
+  margin-top: 45%;
+}
+
+.part:after {
+  width: 10%;
+  height: 100%;
+  margin-top: -55%;
+  margin-left: 45%;
+}
+
+.ship .part:before,
+.ship .part:after {
+  background: #000;
+  transition: .75s;
+}
+
+@keyframes shot-animate {
+  0% {opacity: 0; transform: scale(1);transform-origin: center;}
+  50% {opacity: 1; transform: scale(2);transform-origin: center;}
+  100% {opacity: 1; transform: scale(1);transform-origin: center;}
+}
