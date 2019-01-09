@@ -7,7 +7,9 @@ var reducer = function(state, action) {
   
   switch (action.type) {
     case 'FIRE': 
-      return `${action.x}_${action.y}`;
+      return {x: action.x, y: action.y};
+    case 'SHIP':
+      return {ship: action.ship};
     default: 
       return state;
   }

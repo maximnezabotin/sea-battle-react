@@ -1,4 +1,5 @@
 .border {
+  position: relative;
   width: 480px;
   max-width: 480px;
   background-color: #795548;
@@ -17,5 +18,26 @@
   .border {
     width: 86%;
     padding: .6em;
+  }
+}
+
+.log {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #FFEB3B;
+  animation: log-animate 1.2s ease-out;
+  opacity: 0;
+}
+
+
+@keyframes log-animate {
+  from {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-36px);
   }
 }

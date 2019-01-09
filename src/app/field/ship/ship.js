@@ -11,7 +11,11 @@ export default class Ship extends React.PureComponent {
       this.state[pos[0]+'_'+pos[1]] = false;
     }
     var unsub = store.subscribe(() => {
-      var v = store.getState();
+      var state = store.getState();
+      if (state.x === undefined || state.y === undefined) {
+        return;
+      }
+      var v = `${state.x}_${state.y}`;
       if (this.state.hasOwnProperty(v)) {
         var ns = {};
         ns[v] = true;
@@ -20,6 +24,7 @@ export default class Ship extends React.PureComponent {
         if (counter >= this.props.pos.length) {
           setTimeout(() => {
             this.setState({kill: true});
+            store.dispatch({type: 'SHIP', ship: this.props.type});
           }, 100);
           unsub();
         }

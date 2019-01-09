@@ -1,6 +1,7 @@
 import React from 'react';
 import Cell from './cell/cell';
 import Ship from './ship/ship';
+import { store } from '../store/store';
 import './field.css'
 
 export default class Field extends React.PureComponent {
@@ -21,9 +22,26 @@ export default class Field extends React.PureComponent {
     ]
   };
 
-  /*constructor(props) {
+  constructor(props) {
     super(props);
-  }*/
+    var shipCounter = 0;
+    this.state = {endGame: false, log: ''};
+    this.log = '';
+    var unsub = store.subscribe(() => {
+      var state = store.getState();
+      if (state.ship === undefined) {
+        return;
+      }
+      this.setState({log: `${state.ship} is destroyed`});
+
+      shipCounter++;
+      if (shipCounter >= this.shipLayoutData.layout.length) {
+        console.log('end game');
+        this.endGame = true;
+        unsub();
+      }
+    });
+  }
 
   render() {
     var cells = [];
@@ -36,6 +54,9 @@ export default class Field extends React.PureComponent {
     for (var s of this.shipLayoutData.layout) {
       ships.push(<Ship key={s.ship} type={s.ship} pos={s.positions} />);
     }
-    return (<div className="border"><div className="field">{cells}{ships}</div></div>);
+    return (<div className="border">
+      <div className={this.state.log != '' ? 'log' : ''}>{this.state.log}</div>
+      <div className="field">{cells}{ships}</div>
+    </div>);
   }
 }
