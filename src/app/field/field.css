@@ -21,23 +21,19 @@
   }
 }
 
-.log {
-  position: absolute;
+.endgame {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
   top: 0;
   left: 0;
-  color: #FFEB3B;
-  animation: log-animate 1.2s ease-out;
-  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-
-@keyframes log-animate {
-  from {
-    opacity: 0;
-    transform: translateY(0px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(-36px);
-  }
+.endgame-title {
+  font-size: 5em;
 }
