@@ -1,34 +1,31 @@
 import React from 'react';
-
-import Header from './header/header';
-import Button from './button/button';
-import Field from './field/field';
-import Footer from './footer/footer';
-
-import './app.css'
+import Text from '../text/text';
+import Button from '../button/button';
+import Desk from '../desk/desk';
+import './app.css';
 
 export default class App extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = {isStarted: false};
+    this.state = {game: false};
     this.start = this.start.bind(this);
     this.menu = this.menu.bind(this);
   }
-  
+
   start() {
-    this.setState({isStarted: true});
+    this.setState({game: true});
   }
 
   menu() {
-    this.setState({isStarted: false});
+    this.setState({game: false});
   }
 
   render() {
     return (
-      <div className={this.state.isStarted ? 'main started' : 'main'}>
-        <Header />
-        {this.state.isStarted ? (<Field onClick={this.menu} />) : (<Button onClick={this.start} title="Start" />)}
-        <Footer />
+      <div className={'main ' + (this.state.game ? 'game' : 'menu')}>
+        <Text type="title" text="Battleship" />
+        {this.state.game ? <Desk /> : <Button text="Start" onClick={this.start} />}
+        <Text text={`Maxim Nezabotin ${new Date().getFullYear()} (c)`} />
       </div>
     );
   }

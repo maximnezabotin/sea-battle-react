@@ -2,10 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   min-height: 100vh;
 }
 
-.main.started {
-  justify-content: space-between;
+.main.game {
+  justify-content: space-around;
+}
+
+.main.menu {
+  justify-content: center;
 }

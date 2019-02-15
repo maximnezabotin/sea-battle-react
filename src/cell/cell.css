@@ -1,0 +1,15 @@
+.cell {
+  position: relative;
+  width: 10%;
+  box-sizing: border-box;
+  border: 1px solid #b06a51;
+  background-color: #fff;
+  cursor: crosshair;
+}
+
+.cell:before {
+  content: '';
+  display: block;
+  margin-top: 100%;
+  float: left;
+}

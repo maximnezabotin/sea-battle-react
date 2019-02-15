@@ -1,24 +1,24 @@
-.btn {
+button {
   outline: 0;
   padding: 0.5em 1em;
-  font-size: 1.8em;
-  background-color: #1d7b88;
-  border: 0.15em solid #ffd8ae;
+  font-size: 1.5em;
+  background-color: #00acc6;
+  border: 0.15em solid #ffffd5;
   text-transform: uppercase;
   cursor: pointer;
-  margin: 3em 0;
-  color: #ffd8ae;
+  margin: 4em 0;
+  color: #ffffd5;
   box-shadow: 0 1px 2px #607D8B;
   border-radius: 4px;
   transition: .1s;
-  animation: heartbeat 1s infinite;
+  animation: heartbeat 1.2s infinite;
 }
 
-.btn:hover {
-  background-color: #e91e63;
+button:hover {
+  background-color: #ff0d93;
 }
 
-.btn:active {
+button:active {
   transform: scale(0.95);
   animation: none;
 }
@@ -27,4 +27,10 @@
   from {transform: scale(1);}
   50% {transform: scale(1.05);}
   to {transform: scale(1);}
+}
+
+@media (max-width: 700px) {
+  button {
+    font-size: 1.2em;
+  }
 }
