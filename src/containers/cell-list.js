@@ -8,7 +8,10 @@ function CellList({ cells, onShoot }) {
     <div style={{display: 'contents'}}>
       {cells.map(cell => {
         return (
-          <Cell cell={ cell } onShoot={ () => onShoot(cell.x, cell.y) } key={ `${cell.x}_${cell.y}` } />
+          <Cell 
+            key={`${cell.x}_${cell.y}`}
+            cell={cell}
+            onShoot={ () => onShoot(cell.x, cell.y) } />
         );
       })}
     </div>
