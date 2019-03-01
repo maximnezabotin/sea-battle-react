@@ -5,6 +5,7 @@
   bottom: 0;
   left: 0;
   animation: shot-animate .1s ease-out;
+  z-index: 10;
 }
 
 .mark:before,
@@ -29,8 +30,21 @@
   margin-left: 45%;
 }
 
+.mark.kill:before,
+.mark.kill:after {
+  background: #555;
+  animation-delay: .75s;
+  animation: kill-animate .75s ease-out;
+  animation-fill-mode: forwards;
+}
+
 @keyframes shot-animate {
   0% {opacity: 0; transform: scale(1);transform-origin: center;}
   50% {opacity: 1; transform: scale(1.5);transform-origin: center;}
   100% {opacity: 1; transform: scale(1);transform-origin: center;}
+}
+
+@keyframes kill-animate {
+  from {background: #f44336;}
+  to {background: #555;}
 }

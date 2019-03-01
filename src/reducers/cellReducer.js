@@ -7,6 +7,9 @@ export default function cellReducer(state = [], action) {
     case SHOOT:
       const cell = state.find(cell => cell.x === action.payload.x && cell.y === action.payload.y);
       cell.shoot = true;
+      if (cell.type) {
+        state.filter(c => c.type === cell.type).map(c => c.lifes--);
+      }
       return [...state];
     case CLEAR:
       return [];

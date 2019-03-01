@@ -5,6 +5,10 @@
   border: 1px solid #b06a51;
   background-color: #fff;
   cursor: crosshair;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cell:before {
@@ -12,4 +16,29 @@
   display: block;
   margin-top: 100%;
   float: left;
+}
+
+.active.cell:after {
+  content: '';
+  display: block;
+  border-radius: 50%;
+  width: 40%;
+  height: 40%;
+  background-color: #d7ffff;
+  animation: wave-animate .3s ease-out;
+  animation-fill-mode: forwards;
+  border: 2px solid #2beeff;
+}
+
+@keyframes wave-animate {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: center;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 1;
+    transform-origin: center;
+  }
 }

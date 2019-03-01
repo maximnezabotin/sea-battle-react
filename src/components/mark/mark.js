@@ -4,7 +4,7 @@ import './mark.css';
 export default class Mark extends React.PureComponent {
   render() {
     return (
-      <div className="mark"></div>
+      <div className={this.props.kill ? 'mark kill' : 'mark'}></div>
     )
   }
 }

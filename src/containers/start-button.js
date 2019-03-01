@@ -35,11 +35,13 @@ const getCells = () => {
   const cells = [];
   for (let y = 0; y < 10; y++) {
     for (let x = 0; x < 10; x++) {
+      const type = getType(x, y);
       cells.push({
         x: x,
         y: y,
-        type: getType(x, y),
-        shoot: false
+        type: type,
+        shoot: false,
+        lifes: type ? data.layout.find(s => s.ship === type).positions.length : undefined
       });
     }
   }
