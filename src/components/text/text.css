@@ -15,6 +15,10 @@
   font-weight: 400;
 }
 
+.end {
+  color: #ffda44;
+}
+
 @media (max-width: 700px) {
   .title {
     font-size: 3.75em;

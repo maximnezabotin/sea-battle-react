@@ -1,7 +1,3 @@
-import { connect } from 'react-redux';
-import { init } from '../actions';
-import Button from '../components/button/button';
-
 const data = {
   "shipTypes": {
     "carrier": { "size": 5, "count": 1 },
@@ -31,7 +27,7 @@ const getType = (x, y) => {
   return typeKeys[x+'_'+y];
 };
 
-const getCells = () => {
+const getCellsFunc = () => {
   const cells = [];
   for (let y = 0; y < 10; y++) {
     for (let x = 0; x < 10; x++) {
@@ -48,16 +44,4 @@ const getCells = () => {
   return cells;
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onClick: () => {
-      const cells = getCells();
-      dispatch(init(cells));
-    }
-  };
-};
-
-export default connect(
-  null,
-  mapDispatchToProps
-)(Button);
+export const getCells = getCellsFunc;
