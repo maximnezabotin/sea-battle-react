@@ -5,12 +5,13 @@ export default function cellReducer(state = [], action) {
     case INIT:
       return [...action.payload];
     case SHOOT:
-      const cell = state.find(cell => cell.x === action.payload.x && cell.y === action.payload.y);
+      const newState = [...state];
+      const cell = newState.find(cell => cell.x === action.payload.x && cell.y === action.payload.y);
       cell.shoot = true;
       if (cell.type) {
-        state.filter(c => c.type === cell.type).map(c => c.lifes--);
+        newState.filter(c => c.type === cell.type).map(c => c.lifes--);
       }
-      return [...state];
+      return newState;
     case CLEAR:
       return [];
     default:
